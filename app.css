@@ -7,6 +7,64 @@
 
 body {}
 
+.about-container {
+    display: flex;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.mission-container {
+    display: flex;
+
+}
+
+.world-map {
+    width: 50%;
+}
+
+.footer-container {
+    width: 100%;
+    background-color: black;
+    text-align: center;
+}
+
+footer {
+    display: flex;
+    color: white;
+}
+
+.contact-foot-container {
+    width: 50%;
+    text-align: left;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form input,
+.contact-form textarea {
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.contact-form input {
+    padding: 5px 0px;
+}
+
+.contact-form button {
+    width: 100px;
+    border-radius: 20px;
+    padding: 5px 0;
+}
+
+.footer-container span {
+    color: white;
+}
+
 #toggle-btn,
 .contact-pop-out a {
     position: fixed;
@@ -45,7 +103,7 @@ body {}
     transition: 0.5s;
 }
 
-.active {
+.pop-out-active {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
