@@ -1,3 +1,30 @@
+@font-face {
+    font-family: OrbitronBlack;
+    src: url("./Web Layout/Font/Orbitron/static/Orbitron-Black.ttf");
+}
+
+@font-face {
+    font-family: OrbitronBold;
+    src: url("./Web Layout/Font/Orbitron/static/Orbitron-Bold.ttf");
+}
+
+@font-face {
+    font-family: MontBold;
+    src: url("./Web Layout/Font/Montserrat/static/Montserrat-Bold.ttf");
+}
+
+@font-face {
+    font-family: MontMedium;
+    src: url("./Web Layout/Font/Montserrat/static/Montserrat-Medium.ttf");
+}
+
+#about-us,
+#products,
+#why-us,
+#our-team {
+    padding-top: 80px;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -5,7 +32,55 @@
     box-sizing: border-box;
 }
 
-body {}
+body {
+    width: 100%;
+}
+
+#navbar-container {
+    position: fixed;
+    background: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 4;
+}
+
+#navbar-container .nav-inside-container {
+    padding: 20px 20px;
+}
+
+#navbar-container .navbar-brand img {
+    width: 100px;
+}
+
+.navigation-words a {
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 0 20px;
+    font-family: MontBold;
+}
+
+.navigation-words a:hover {
+    color: #ff895a;
+    text-decoration: underline;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100vh;
+    z-index: -5;
+}
+
+.carousel-text-container {
+    position: absolute;
+    top: 40%;
+    right: 10%;
+    color: white;
+    font-weight: bold;
+    z-index: 3;
+    font-family: OrbitronBlack;
+}
 
 .about-container {
     display: flex;
@@ -16,18 +91,160 @@ body {}
 }
 
 .mission-container {
-    display: flex;
-
+    width: 100%;
+    background-image: url("./Web Layout/JPG & PNG/2. About Us/World Map.jpg");
+    background-size: 100% 100%;
 }
 
-.world-map {
+.mission-text-container {
     width: 50%;
+    margin-left: 50%;
+    color: white;
+    padding: 50px;
+}
+
+.mission-text-container h3 {
+    font-family: OrbitronBlack;
+}
+
+.mission-text-container p {
+    font-family: MontMedium;
+}
+
+#products>.products-title {
+    font-family: OrbitronBlack;
+    font-size: 60pt;
+    color: #a0a0a0;
+    text-align: right;
+    padding-right: 10px;
+}
+
+.wood-pellet-container,
+.wood-chips-container {
+    display: flex;
+    width: 100%;
+    padding: 0 40px;
+}
+
+.product-text {
+    width: 60%;
+    padding-right: 30px;
+}
+
+.product-text>h1 {
+    font-family: OrbitronBold;
+    color: #ff895a;
+}
+
+.product-text>p {
+    font-family: MontMedium;
+    color: #515151;
+}
+
+.product-carousel-container {
+    width: 40%;
+    height: 400px;
+    position: relative;
+    padding-left: 50px;
+    /* background-image: url("./Web Layout/JPG & PNG/3. Products/Brown-Rectangle.jpg");
+    background-position: right 0% bottom 0%;
+    background-size: 5% auto; */
+}
+
+.product-carousel-container .back-img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -2;
+}
+
+.product-carousel {
+    width: 90%;
+}
+
+.carousel-indicators #circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
+
+.product-carousel .carousel-control-prev-icon {
+    background-image: url("./Web Layout/JPG & PNG/3. Products/Left-Arrow.png") !important;
+}
+
+.product-carousel .carousel-control-next-icon {
+    background-image: url("./Web Layout/JPG & PNG/3. Products/Right-Arrow.png") !important;
+}
+
+.product-img {
+    height: 380px;
+}
+
+.product-img>img {
+    width: 100%;
+    height: 100%;
+}
+
+#why-us {
+    width: 100%;
+    background-image: url("./Web Layout/JPG & PNG/4. Why Us/BG-Image.jpg");
+    background-size: 100% 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.why-us-content {
+    width: 25%;
+    text-align: center;
+    margin: 0 50px;
+    margin-bottom: 50px;
+    color: white;
+    font-family: MontMedium;
+}
+
+.why-us-content h5 {
+    font-family: MontBold;
+    margin: 15px 0;
+}
+
+#our-team>span {
+    font-family: OrbitronBlack;
+    font-size: 60pt;
+    color: #a0a0a0;
+    padding-left: 10px;
+}
+
+.our-team-container {
+    display: flex;
+}
+
+.team-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 50px;
+    font-family: MontBold;
+    color: #515151;
+}
+
+.team-content img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: solid 5px #ad7e64;
+}
+
+.team-content p {
+    text-align: center;
+    font-family: MontMedium;
 }
 
 .footer-container {
     width: 100%;
     background-color: black;
-    text-align: center;
+    padding: 70px 50px;
+    padding-bottom: 30px;
 }
 
 footer {
@@ -40,6 +257,10 @@ footer {
     text-align: left;
 }
 
+.contact-foot-container>h1 {
+    font-family: OrbitronBold;
+}
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -49,6 +270,7 @@ footer {
 .contact-form textarea {
     border-radius: 5px;
     margin-bottom: 10px;
+    font-family: MontMedium;
 }
 
 .contact-form input {
@@ -59,10 +281,45 @@ footer {
     width: 100px;
     border-radius: 20px;
     padding: 5px 0;
+    background-color: #ff895a;
+    font-family: MontBold;
+    color: white;
 }
 
-.footer-container span {
+.contact-container {
+    margin-left: 60px;
+}
+
+.contact-container iframe {
+    margin-bottom: 10px;
+}
+
+.contact-container .contact-info {
+    text-align: left;
     color: white;
+    font-family: MontMedium;
+    display: flex;
+    margin: 10px 0;
+    font-size: 12pt;
+}
+
+.contact-icon {
+    margin: auto 0;
+}
+
+.contact-icon:nth-child(1) {
+    margin-top: 3px;
+}
+
+.contact-container .contact-info .contact-text {
+    margin-left: 10px;
+}
+
+.footer-container .copyright {
+    color: white;
+    font-family: MontMedium;
+    text-align: center;
+    margin-top: 30px;
 }
 
 #toggle-btn,
@@ -73,6 +330,7 @@ footer {
     display: grid;
     place-items: center;
     border-radius: 50%;
+    z-index: 90;
 }
 
 #toggle-btn {
@@ -90,7 +348,7 @@ footer {
 }
 
 .contact-pop-out a {
-    background-color: black;
+    background-color: #ff895a;
     height: 50px;
     width: 50px;
     bottom: 20px;
