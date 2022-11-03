@@ -454,6 +454,11 @@ footer {
         width: 100%;
     }
 
+    .product-text:nth-child(1),
+    .product-text:nth-child(2) {
+        padding: 0 30px;
+    }
+
     .product-carousel-container {
         width: 100%;
     }
