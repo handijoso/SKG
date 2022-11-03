@@ -25,6 +25,19 @@
     padding-top: 80px;
 }
 
+.content {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1.5s;
+}
+
+.show {
+    opacity: 1;
+    transform: translateX(0);
+    filter: blur(0px);
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -36,14 +49,31 @@ body {
     width: 100%;
 }
 
+.show-background {
+    animation: showNavBack 2s;
+    background-color: black;
+}
+
 #navbar-container {
     position: fixed;
-    background: none;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 4;
 }
+
+.navbar-toggle-icon {
+    text-align: right;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navigation-container .navbar-toggler {
+    border-color: white;
+}
+
 
 #navbar-container .nav-inside-container {
     padding: 20px 20px;
@@ -128,7 +158,18 @@ body {
 
 .product-text {
     width: 60%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.product-text:nth-child(1) {
+    background-image: url("./1.svg");
     padding-right: 30px;
+}
+
+.product-text:nth-child(2) {
+    background-image: url("./2.svg");
+    padding-left: 30px;
 }
 
 .product-text>h1 {
@@ -145,10 +186,14 @@ body {
     width: 40%;
     height: 400px;
     position: relative;
+}
+
+.product-carousel-container:nth-child(1) {
+    margin-right: 50px;
+}
+
+.product-carousel-container:nth-child(2) {
     padding-left: 50px;
-    /* background-image: url("./Web Layout/JPG & PNG/3. Products/Brown-Rectangle.jpg");
-    background-position: right 0% bottom 0%;
-    background-size: 5% auto; */
 }
 
 .product-carousel-container .back-img {
@@ -292,6 +337,8 @@ footer {
 
 .contact-container iframe {
     margin-bottom: 10px;
+    width: 400px;
+    height: 300px;
 }
 
 .contact-container .contact-info {
@@ -365,4 +412,109 @@ footer {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+@media (max-width: 450px) {
+
+    #about-container,
+    #mission-container,
+    #products,
+    #why-us,
+    #our-team {
+        width: 100vw;
+    }
+
+    .about-container {
+        flex-direction: column;
+    }
+
+    .about-text {
+        width: 100%;
+    }
+
+    .about-img {
+        width: 90%;
+    }
+
+    .mission-container {
+        background-image: url("./Web Layout/JPG & PNG/3. Products/Brown-Rectangle.jpg");
+    }
+
+    .mission-text-container {
+        width: 100%;
+        margin: 0;
+    }
+
+    #products>.products-title,
+    #our-team>span {
+        font-size: 30pt;
+    }
+
+    .product-text {
+        width: 100%;
+    }
+
+    .product-carousel-container {
+        width: 100%;
+    }
+
+    .product-carousel-container:nth-child(1) {
+        margin-right: 0px;
+        padding-left: 50px;
+    }
+
+    .wood-pellet-container,
+    .wood-chips-container {
+        flex-direction: column;
+        padding: 0px;
+        margin-top: 40px;
+    }
+
+    .wood-chips-container {
+        flex-direction: column-reverse;
+    }
+
+    .why-us-content {
+        width: 50%;
+        margin: 0;
+        margin-bottom: 50px;
+    }
+
+    .why-us-content p {
+        display: none;
+    }
+
+    .our-team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer {
+        flex-direction: column;
+    }
+
+    .contact-foot-container {
+        width: 100%;
+    }
+
+    .contact-container {
+        margin: 0;
+        max-width: 100%;
+    }
+
+    .contact-container iframe {
+        width: 95%;
+        height: auto;
+        margin-top: 35px;
+    }
+}
+
+@keyframes showNavBack {
+    0% {
+        background: none;
+    }
+
+    100% {
+        background-color: black;
+    }
 }
