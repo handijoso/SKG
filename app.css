@@ -18,24 +18,10 @@
     src: url("./Web Layout/Font/Montserrat/static/Montserrat-Medium.ttf");
 }
 
-#about-us,
+
 #products,
-#why-us,
 #our-team {
     padding-top: 80px;
-}
-
-.content {
-    opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-100%);
-    transition: all 1.5s;
-}
-
-.show {
-    opacity: 1;
-    transform: translateX(0);
-    filter: blur(0px);
 }
 
 * {
@@ -114,10 +100,23 @@ body {
 
 .about-container {
     display: flex;
+    padding-top: 100px;
 }
 
 .about-text {
     width: 50%;
+    padding: 0 40px;
+}
+
+.about-text>h1 {
+    font-family: OrbitronBlack;
+    color: #ff895a;
+}
+
+.about-text p {
+    font-family: MontMedium;
+    color: #515151;
+    font-size: 11pt;
 }
 
 .mission-container {
@@ -143,7 +142,7 @@ body {
 
 #products>.products-title {
     font-family: OrbitronBlack;
-    font-size: 60pt;
+    font-size: 50pt;
     color: #a0a0a0;
     text-align: right;
     padding-right: 10px;
@@ -154,6 +153,10 @@ body {
     display: flex;
     width: 100%;
     padding: 0 40px;
+}
+
+.wood-chips-container {
+    margin-top: 40px;
 }
 
 .product-text {
@@ -180,6 +183,7 @@ body {
 .product-text>p {
     font-family: MontMedium;
     color: #515151;
+    font-size: 11pt;
 }
 
 .product-carousel-container {
@@ -237,6 +241,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     margin-top: 50px;
+    padding-top: 100px;
 }
 
 .why-us-content {
@@ -248,14 +253,25 @@ body {
     font-family: MontMedium;
 }
 
+.why-us-content img {
+    width: 45px;
+    height: 45px;
+}
+
 .why-us-content h5 {
     font-family: MontBold;
     margin: 15px 0;
+    font-size: 14pt;
+}
+
+.why-us-content p {
+    font-family: MontMedium;
+    font-size: 11pt;
 }
 
 #our-team>span {
     font-family: OrbitronBlack;
-    font-size: 60pt;
+    font-size: 50pt;
     color: #a0a0a0;
     padding-left: 10px;
 }
@@ -288,7 +304,7 @@ body {
 .footer-container {
     width: 100%;
     background-color: black;
-    padding: 70px 50px;
+    padding: 100px 50px;
     padding-bottom: 30px;
 }
 
