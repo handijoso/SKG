@@ -33,3 +33,21 @@ function navbarBackground() {
 window.addEventListener("scroll", navbarBackground)
 
 
+const navbarBurger = document.querySelector(".navbar-toggle-icon");
+const navbarPopUp = document.querySelector(".nav-inside-container");
+let i = 0;
+function addBlackBackground() {
+    if (i == 0) {
+        navbarPopUp.classList.add("show-background");
+        i++;
+    }
+    else {
+        navbarPopUp.classList.remove("show-background");
+        i = 0;
+    }
+}
+
+navbarBurger.addEventListener("click", addBlackBackground)
+
+
+
